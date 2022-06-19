@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Style Files -->
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/user-profile.css" />
+    <link rel="stylesheet" href="CSS/all.min.css"></link>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+
+
+
+
+    <title>Exam (1) Start</title>
+</head>
+
+<body>
+    <!-- Start NavBar -->
+    <nav>
+        <div class="nav-container container">
+            <a href="index.html">
+                <h4>E-Learning</h4>
+            </a>
+            <div class="navbar">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="profile-img" onclick="menuToggle();"> <img src="images/user-profile.png" alt=""></div>
+                <div class="profile">
+                    <ul>
+                        <li><img src="images/user-icon.png" alt="">
+                            <a href="user-profile.html">Your Profile</a>
+                        </li>
+
+                        <li><img src="images/your-courses.png" alt="">
+                            <a href="#your-courses">Your Courses</a>
+                        </li>
+
+                        <li><img src="images/your-exams.png" alt="">
+                            <a href="user-exams.html">Your Exams</a>
+                        </li>
+
+                        <li><img src="images/community-icon.png" alt="">
+                            <a href="community.html">Community</a>
+                        </li>
+
+                        <li><img src="images/logout.png" alt="">
+                            <a href="#">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <i id="icon" class="fa-solid fa-moon fa-2x"></i>
+            </div>
+            <button id="open-menu-btn"><i class="fas fa-bars"></i></button>
+            <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </nav>
+    <!-- End NavBar -->
+
+
+    <section class="exam-container">
+        <div class="user-exam">
+            <h2>Your Exam Number [1]</h2>
+
+            <div class="qa-box">
+
+                <div class="qa-header">
+                    <span>Score: <span id="score">0</span></span>
+                    <span id="countdown">0</span>
+                </div>
+
+
+                <div class="qa-footer" style="text-align: center;">
+                    <a href="user-exam-1.html" class="btn1">Start</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="footer-container container ">
+            <div class="footer-1 ">
+                <a href="index.html " class="footer-logo ">
+                    <h4>E-Learning</h4>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, vitae ipsam reiciendis explicabo deserunt quo!</p>
+            </div>
+
+            <div class="footer-2 ">
+                <h4>Permalinks</h4>
+                <ul class="permalinks ">
+                    <li>
+                        <a href="index.html ">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html ">About</a>
+                    </li>
+                    <li>
+                        <a href="courses.html ">Courses</a>
+                    </li>
+                    <li>
+                        <a href="contact.html ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-3 ">
+                <h4>Privacy</h4>
+                <ul class="privacy ">
+                    <li>
+                        <a href="# ">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="# ">Terms And Conditios</a>
+                    </li>
+                    <li>
+                        <a href="# ">Refund Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-4 ">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+01 234 567 8910</p>
+                    <p>Admin@info.com</p>
+                </div>
+
+                <ul class="footer-social ">
+                    <li>
+                        <a href="# "><i class="fa-brands fa-facebook-f "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa-brands fa-instagram "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa-brands fa-twitter "></i></a>
+                    </li>
+                    <li>
+                        <a href="# "><i class="fa-brands fa-linkedin-in "></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright ">
+            <small>All Rights Reversed &copy; E-Learning 2022 </small>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="JS/main.js"></script>
+    <script src="JS/user-exam.js"></script>
+
+
+
+    <script>
+        // =====> Dark & Light Mood <===== //
+        const icon = document.getElementById("icon");
+        const bodyEl = document.querySelector("body");
+
+        const lightMood = () => {
+            bodyEl.classList.toggle("light-theme");
+        };
+
+        icon.addEventListener("click", () => {
+            setLightMood = localStorage.getItem("light");
+
+            if (setLightMood !== "on") {
+                lightMood();
+
+                setLightMood = localStorage.setItem("light", "on");
+            } else {
+                lightMood();
+
+                setLightMood = localStorage.setItem("light", null);
+            }
+        });
+
+        let setLightMood = localStorage.getItem("light");
+
+        if (setLightMood === "on") {
+            lightMood();
+        }
+    </script>
+
+
+    <script>
+        // =====> profile toggle Menu <===== //
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.profile');
+            toggleMenu.classList.toggle('active')
+
+        }
+    </script>
+
+
+    <script>
+        //----------  Exam Form Change ----------- //
+
+        const form = document.querySelector("form"),
+            nextBtn = document.querySelector(".nextBtn"),
+            backBtn = document.querySelector(".backBtn"),
+            allInput = document.querySelectorAll(".first input");
+
+        nextBtn.addEventListener("click", () => {
+            allInput.forEach((input) => {
+                if (input.value != "") {
+                    form.classList.add("secActive");
+                } else {
+                    form.classList.remove("secActive");
+                }
+            });
+        });
+
+
+        backBtn.addEventListener('click', () => form.classList.remove("secActive"))
+    </script>
+</body>
+
+</html>
